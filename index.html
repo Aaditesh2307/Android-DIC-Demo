@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Device Verification & mTLS Security | Chromium Browser</title>
+    <meta name="description" content="Enterprise-grade security through hardware-backed device verification and mutual TLS authentication in Chromium-based Android browsers.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="particle-background" id="particles"></div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Hardware-Backed</span><br>
+                    Device Verification
+                </h1>
+                <p class="hero-subtitle">
+                    Enterprise-grade security through mTLS authentication and Android StrongBox integration
+                </p>
+                <div class="hero-badges">
+                    <span class="badge">🔐 StrongBox TEE</span>
+                    <span class="badge">🔒 mTLS Authentication</span>
+                    <span class="badge">📱 Chromium-Based</span>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <p>Scroll to explore</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement -->
+    <section class="section problem-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">The Challenge</span>
+                <h2>Enterprise Security Demands Trust</h2>
+                <p class="section-description">
+                    Organizations need to ensure that only authorized, verified devices can access sensitive enterprise resources.
+                </p>
+            </div>
+            
+            <div class="problem-grid">
+                <div class="problem-card fade-up" style="--delay: 0.1s">
+                    <div class="icon-wrapper">⚠️</div>
+                    <h3>Unauthorized Access</h3>
+                    <p>Unverified devices pose security risks to enterprise networks</p>
+                </div>
+                <div class="problem-card fade-up" style="--delay: 0.2s">
+                    <div class="icon-wrapper">🔓</div>
+                    <h3>Weak Authentication</h3>
+                    <p>Traditional password-based systems are vulnerable to attacks</p>
+                </div>
+                <div class="problem-card fade-up" style="--delay: 0.3s">
+                    <div class="icon-wrapper">📊</div>
+                    <h3>Compliance Requirements</h3>
+                    <p>100% policy-compliant connections are mandatory for enterprises</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Flow -->
+    <section class="section flow-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">How It Works</span>
+                <h2>The mTLS Authentication Flow</h2>
+                <p class="section-description">
+                    A sophisticated multi-layer security architecture ensuring device authenticity
+                </p>
+            </div>
+
+            <div class="flow-container">
+                <!-- Step 1 -->
+                <div class="flow-step fade-up" style="--delay: 0.1s">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-icon">🔑</div>
+                        <h3>Security Mode Activation</h3>
+                        <p>User enables Security Mode toggle in the browser</p>
+                        <div class="step-visual">
+                            <div class="toggle-demo">
+                                <div class="toggle-track">
+                                    <div class="toggle-thumb"></div>
+                                </div>
+                                <span>Security Mode</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-arrow">↓</div>
+
+                <!-- Step 2 -->
+                <div class="flow-step fade-up" style="--delay: 0.2s">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-icon">🛡️</div>
+                        <h3>Hardware-Backed Key Generation</h3>
+                        <p>Private key generated and stored in Android StrongBox or TEE</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">StrongBox</span>
+                            <span class="tech-badge">TEE</span>
+                            <span class="tech-badge">Hardware Security</span>
+                        </div>
+                        <div class="security-note">
+                            <strong>🔒 Cryptographic Security:</strong> Keys cannot be extracted from hardware
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-arrow">↓</div>
+
+                <!-- Step 3 -->
+                <div class="flow-step fade-up" style="--delay: 0.3s">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <div class="step-icon">📜</div>
+                        <h3>X.509 Certificate Creation</h3>
+                        <p>Generate and store X.509 certificate from the private key</p>
+                        <div class="certificate-visual">
+                            <div class="cert-box">
+                                <div class="cert-header">X.509 Certificate</div>
+                                <div class="cert-field">Subject: Device ID</div>
+                                <div class="cert-field">Issuer: Enterprise CA</div>
+                                <div class="cert-field">Public Key: RSA 2048</div>
+                                <div class="cert-signature">Digital Signature ✓</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-arrow">↓</div>
+
+                <!-- Step 4 -->
+                <div class="flow-step fade-up" style="--delay: 0.4s">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <div class="step-icon">🔄</div>
+                        <h3>mTLS with Forward Proxy</h3>
+                        <p>Device certificate used for mutual TLS authentication with forward proxy</p>
+                        <div class="mtls-diagram">
+                            <div class="mtls-node">
+                                <div class="node-icon">📱</div>
+                                <span>Browser</span>
+                            </div>
+                            <div class="mtls-connection">
+                                <div class="connection-line"></div>
+                                <span class="connection-label">mTLS Handshake</span>
+                            </div>
+                            <div class="mtls-node">
+                                <div class="node-icon">🌐</div>
+                                <span>Forward Proxy</span>
+                            </div>
+                        </div>
+                        <div class="security-note">
+                            <strong>🔐 IP Restriction:</strong> Okta configured to accept only proxy IP (xyz)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-arrow">↓</div>
+
+                <!-- Step 5 -->
+                <div class="flow-step fade-up" style="--delay: 0.5s">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <div class="step-icon">🎫</div>
+                        <h3>SAML Authentication</h3>
+                        <p>Okta portal authenticates and returns SAML token via browser extension</p>
+                        <div class="saml-flow">
+                            <div class="saml-step">Okta Login</div>
+                            <span>→</span>
+                            <div class="saml-step">SAML Token</div>
+                            <span>→</span>
+                            <div class="saml-step">Browser Extension</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flow-arrow">↓</div>
+
+                <!-- Step 6 -->
+                <div class="flow-step fade-up highlight-step" style="--delay: 0.6s">
+                    <div class="step-number">06</div>
+                    <div class="step-content">
+                        <div class="step-icon">✨</div>
+                        <h3>Security Features Activated</h3>
+                        <p>Enterprise security policies enforced through centralized management</p>
+                        <div class="features-preview">
+                            <div class="feature-pill">🚫 Domain Blocking</div>
+                            <div class="feature-pill">📋 Copy/Paste Control</div>
+                            <div class="feature-pill">📥 Upload/Download Blocking</div>
+                            <div class="feature-pill">⚙️ Centralized Admin Control</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Benefits -->
+    <section class="section benefits-section">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-label">Security Advantages</span>
+                <h2>Enterprise-Grade Protection</h2>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card fade-up" style="--delay: 0.1s">
+                    <div class="benefit-icon">🔐</div>
+                    <h3>Hardware-Backed Security</h3>
+                    <p>Private keys stored in StrongBox/TEE are cryptographically secure and cannot be extracted, preventing key theft and unauthorized access.</p>
+                </div>
+
+                <div class="benefit-card fade-up" style="--delay: 0.2s">
+                    <div class="benefit-icon">✅</div>
+                    <h3>100% Policy Compliance</h3>
+                    <p>Certificate validation and proxy enforcement integrated into Chromium's startup lifecycle ensures all connections are policy-compliant.</p>
+                </div>
+
+                <div class="benefit-card fade-up" style="--delay: 0.3s">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Device Authentication</h3>
+                    <p>mTLS-based certificate management enables authenticated device-to-server communication, ensuring only verified devices access enterprise resources.</p>
+                </div>
+
+                <div class="benefit-card fade-up" style="--delay: 0.4s">
+                    <div class="benefit-icon">🌐</div>
+                    <h3>Exclusive Access Control</h3>
+                    <p>IP-restricted Okta portal accessible only through the verified browser, maintaining strict access boundaries for sensitive resources.</p>
+                </div>
+
+                <div class="benefit-card fade-up" style="--delay: 0.5s">
+                    <div class="benefit-icon">⚙️</div>
+                    <h3>Centralized Management</h3>
+                    <p>Admin-controlled security policies through Okta Dashboard enable organization-wide security enforcement and monitoring.</p>
+                </div>
+
+                <div class="benefit-card fade-up" style="--delay: 0.6s">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Seamless Integration</h3>
+                    <p>Built directly into Chromium architecture, providing enterprise security without compromising user experience or browser performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Features Preview -->
+    <section class="section features-preview-section">
+        <div class="container">
+            <div class="features-cta fade-up">
+                <h2>Advanced Security Features</h2>
+                <p>Once authenticated, the browser enforces comprehensive security policies</p>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <span class="feature-check">✓</span>
+                        <span>Domain Blocking & Whitelisting</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-check">✓</span>
+                        <span>Copy/Paste Restrictions</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-check">✓</span>
+                        <span>Upload/Download Controls</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-check">✓</span>
+                        <span>Screenshot Prevention</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-check">✓</span>
+                        <span>Network Policy Enforcement</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-check">✓</span>
+                        <span>Real-time Admin Control</span>
+                    </div>
+                </div>
+                <a href="#" class="cta-button">
+                    Learn More About Security Features
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Android Device Verification & mTLS Security Implementation</p>
+            <p class="footer-subtitle">Chromium-Based Enterprise Browser | Jul 2025 – Dec 2025</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
