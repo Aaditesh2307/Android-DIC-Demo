@@ -193,6 +193,7 @@ body {
     transform: translateX(-50%);
     text-align: center;
     animation: bounce 2s infinite;
+    z-index: 10;
 }
 
 @keyframes bounce {
@@ -761,5 +762,14 @@ body {
     
     .features-list {
         grid-template-columns: 1fr;
+    }
+    
+    .scroll-indicator {
+        display: block;
+        bottom: var(--spacing-md);
+    }
+    
+    .scroll-indicator p {
+        display: block;
     }
 }
